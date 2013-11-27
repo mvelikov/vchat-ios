@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C320FA31846814000D3B6BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C320FA21846814000D3B6BC /* Foundation.framework */; };
+		0C320FA51846814000D3B6BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C320FA41846814000D3B6BC /* CoreGraphics.framework */; };
+		0C320FA71846814000D3B6BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C320FA61846814000D3B6BC /* UIKit.framework */; };
+		0C320FAD1846814000D3B6BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C320FAB1846814000D3B6BC /* InfoPlist.strings */; };
+		0C320FAF1846814000D3B6BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C320FAE1846814000D3B6BC /* main.m */; };
+		0C320FB31846814000D3B6BC /* VCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C320FB21846814000D3B6BC /* VCAppDelegate.m */; };
+		0C320FB61846814000D3B6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C320FB41846814000D3B6BC /* Main.storyboard */; };
+		0C320FB91846814000D3B6BC /* VCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C320FB81846814000D3B6BC /* VCViewController.m */; };
+		0C320FBB1846814000D3B6BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C320FBA1846814000D3B6BC /* Images.xcassets */; };
+		0C320FC21846814000D3B6BC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C320FC11846814000D3B6BC /* XCTest.framework */; };
+		0C320FC31846814000D3B6BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C320FA21846814000D3B6BC /* Foundation.framework */; };
+		0C320FC41846814000D3B6BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C320FA61846814000D3B6BC /* UIKit.framework */; };
+		0C320FCC1846814000D3B6BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C320FCA1846814000D3B6BC /* InfoPlist.strings */; };
+		0C320FCE1846814000D3B6BC /* VChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C320FCD1846814000D3B6BC /* VChatTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C320FC51846814000D3B6BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C320F971846814000D3B6BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C320F9E1846814000D3B6BC;
+			remoteInfo = VChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C320F9F1846814000D3B6BC /* VChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C320FA21846814000D3B6BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0C320FA41846814000D3B6BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0C320FA61846814000D3B6BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0C320FAA1846814000D3B6BC /* VChat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VChat-Info.plist"; sourceTree = "<group>"; };
+		0C320FAC1846814000D3B6BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0C320FAE1846814000D3B6BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0C320FB01846814000D3B6BC /* VChat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VChat-Prefix.pch"; sourceTree = "<group>"; };
+		0C320FB11846814000D3B6BC /* VCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCAppDelegate.h; sourceTree = "<group>"; };
+		0C320FB21846814000D3B6BC /* VCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCAppDelegate.m; sourceTree = "<group>"; };
+		0C320FB51846814000D3B6BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C320FB71846814000D3B6BC /* VCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCViewController.h; sourceTree = "<group>"; };
+		0C320FB81846814000D3B6BC /* VCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCViewController.m; sourceTree = "<group>"; };
+		0C320FBA1846814000D3B6BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0C320FC01846814000D3B6BC /* VChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C320FC11846814000D3B6BC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0C320FC91846814000D3B6BC /* VChatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VChatTests-Info.plist"; sourceTree = "<group>"; };
+		0C320FCB1846814000D3B6BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0C320FCD1846814000D3B6BC /* VChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VChatTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C320F9C1846814000D3B6BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C320FA51846814000D3B6BC /* CoreGraphics.framework in Frameworks */,
+				0C320FA71846814000D3B6BC /* UIKit.framework in Frameworks */,
+				0C320FA31846814000D3B6BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C320FBD1846814000D3B6BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C320FC21846814000D3B6BC /* XCTest.framework in Frameworks */,
+				0C320FC41846814000D3B6BC /* UIKit.framework in Frameworks */,
+				0C320FC31846814000D3B6BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C320F961846814000D3B6BC = {
+			isa = PBXGroup;
+			children = (
+				0C320FA81846814000D3B6BC /* VChat */,
+				0C320FC71846814000D3B6BC /* VChatTests */,
+				0C320FA11846814000D3B6BC /* Frameworks */,
+				0C320FA01846814000D3B6BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C320FA01846814000D3B6BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C320F9F1846814000D3B6BC /* VChat.app */,
+				0C320FC01846814000D3B6BC /* VChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C320FA11846814000D3B6BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C320FA21846814000D3B6BC /* Foundation.framework */,
+				0C320FA41846814000D3B6BC /* CoreGraphics.framework */,
+				0C320FA61846814000D3B6BC /* UIKit.framework */,
+				0C320FC11846814000D3B6BC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C320FA81846814000D3B6BC /* VChat */ = {
+			isa = PBXGroup;
+			children = (
+				0C320FB11846814000D3B6BC /* VCAppDelegate.h */,
+				0C320FB21846814000D3B6BC /* VCAppDelegate.m */,
+				0C320FB41846814000D3B6BC /* Main.storyboard */,
+				0C320FB71846814000D3B6BC /* VCViewController.h */,
+				0C320FB81846814000D3B6BC /* VCViewController.m */,
+				0C320FBA1846814000D3B6BC /* Images.xcassets */,
+				0C320FA91846814000D3B6BC /* Supporting Files */,
+			);
+			path = VChat;
+			sourceTree = "<group>";
+		};
+		0C320FA91846814000D3B6BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C320FAA1846814000D3B6BC /* VChat-Info.plist */,
+				0C320FAB1846814000D3B6BC /* InfoPlist.strings */,
+				0C320FAE1846814000D3B6BC /* main.m */,
+				0C320FB01846814000D3B6BC /* VChat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C320FC71846814000D3B6BC /* VChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C320FCD1846814000D3B6BC /* VChatTests.m */,
+				0C320FC81846814000D3B6BC /* Supporting Files */,
+			);
+			path = VChatTests;
+			sourceTree = "<group>";
+		};
+		0C320FC81846814000D3B6BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C320FC91846814000D3B6BC /* VChatTests-Info.plist */,
+				0C320FCA1846814000D3B6BC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C320F9E1846814000D3B6BC /* VChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C320FD11846814000D3B6BC /* Build configuration list for PBXNativeTarget "VChat" */;
+			buildPhases = (
+				0C320F9B1846814000D3B6BC /* Sources */,
+				0C320F9C1846814000D3B6BC /* Frameworks */,
+				0C320F9D1846814000D3B6BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VChat;
+			productName = VChat;
+			productReference = 0C320F9F1846814000D3B6BC /* VChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C320FBF1846814000D3B6BC /* VChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C320FD41846814000D3B6BC /* Build configuration list for PBXNativeTarget "VChatTests" */;
+			buildPhases = (
+				0C320FBC1846814000D3B6BC /* Sources */,
+				0C320FBD1846814000D3B6BC /* Frameworks */,
+				0C320FBE1846814000D3B6BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C320FC61846814000D3B6BC /* PBXTargetDependency */,
+			);
+			name = VChatTests;
+			productName = VChatTests;
+			productReference = 0C320FC01846814000D3B6BC /* VChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C320F971846814000D3B6BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = mihata;
+				TargetAttributes = {
+					0C320FBF1846814000D3B6BC = {
+						TestTargetID = 0C320F9E1846814000D3B6BC;
+					};
+				};
+			};
+			buildConfigurationList = 0C320F9A1846814000D3B6BC /* Build configuration list for PBXProject "VChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C320F961846814000D3B6BC;
+			productRefGroup = 0C320FA01846814000D3B6BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C320F9E1846814000D3B6BC /* VChat */,
+				0C320FBF1846814000D3B6BC /* VChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C320F9D1846814000D3B6BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C320FBB1846814000D3B6BC /* Images.xcassets in Resources */,
+				0C320FAD1846814000D3B6BC /* InfoPlist.strings in Resources */,
+				0C320FB61846814000D3B6BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C320FBE1846814000D3B6BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C320FCC1846814000D3B6BC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C320F9B1846814000D3B6BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C320FAF1846814000D3B6BC /* main.m in Sources */,
+				0C320FB91846814000D3B6BC /* VCViewController.m in Sources */,
+				0C320FB31846814000D3B6BC /* VCAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C320FBC1846814000D3B6BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C320FCE1846814000D3B6BC /* VChatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C320FC61846814000D3B6BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C320F9E1846814000D3B6BC /* VChat */;
+			targetProxy = 0C320FC51846814000D3B6BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0C320FAB1846814000D3B6BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C320FAC1846814000D3B6BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0C320FB41846814000D3B6BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C320FB51846814000D3B6BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0C320FCA1846814000D3B6BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C320FCB1846814000D3B6BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C320FCF1846814000D3B6BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0C320FD01846814000D3B6BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C320FD21846814000D3B6BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VChat/VChat-Prefix.pch";
+				INFOPLIST_FILE = "VChat/VChat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0C320FD31846814000D3B6BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VChat/VChat-Prefix.pch";
+				INFOPLIST_FILE = "VChat/VChat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0C320FD51846814000D3B6BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VChat.app/VChat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VChat/VChat-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VChatTests/VChatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0C320FD61846814000D3B6BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VChat.app/VChat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VChat/VChat-Prefix.pch";
+				INFOPLIST_FILE = "VChatTests/VChatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C320F9A1846814000D3B6BC /* Build configuration list for PBXProject "VChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C320FCF1846814000D3B6BC /* Debug */,
+				0C320FD01846814000D3B6BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C320FD11846814000D3B6BC /* Build configuration list for PBXNativeTarget "VChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C320FD21846814000D3B6BC /* Debug */,
+				0C320FD31846814000D3B6BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0C320FD41846814000D3B6BC /* Build configuration list for PBXNativeTarget "VChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C320FD51846814000D3B6BC /* Debug */,
+				0C320FD61846814000D3B6BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C320F971846814000D3B6BC /* Project object */;
+}
