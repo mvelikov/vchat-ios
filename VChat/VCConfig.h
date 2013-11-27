@@ -6,6 +6,6 @@
 //  Copyright (c) 2013 mihata. All rights reserved.
 //
 
-#define kOrigin @""
+#define kOrigin @"t"
 #define kPubKey @""
 #define kSubKey @""
