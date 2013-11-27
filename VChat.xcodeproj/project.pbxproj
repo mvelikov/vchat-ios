@@ -76,6 +76,9 @@
 		0C3210AC18468E8A00D3B6BC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3210AB18468E8A00D3B6BC /* CFNetwork.framework */; };
 		0C3210AE18468E9500D3B6BC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3210AD18468E9500D3B6BC /* libz.dylib */; };
 		0C3210B018468EA100D3B6BC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3210AF18468EA100D3B6BC /* SystemConfiguration.framework */; };
+		0C3210B51846A00000D3B6BC /* VCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210B41846A00000D3B6BC /* VCUser.m */; };
+		0C3210B81846A08900D3B6BC /* VCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210B71846A08900D3B6BC /* VCMessage.m */; };
+		0C3210BB1846A13600D3B6BC /* VCChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210BA1846A13600D3B6BC /* VCChannel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +260,12 @@
 		0C3210AD18468E9500D3B6BC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0C3210AF18468EA100D3B6BC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C3210B1184691DD00D3B6BC /* VCConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCConfig.h; sourceTree = "<group>"; };
+		0C3210B31846A00000D3B6BC /* VCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCUser.h; sourceTree = "<group>"; };
+		0C3210B41846A00000D3B6BC /* VCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCUser.m; sourceTree = "<group>"; };
+		0C3210B61846A08900D3B6BC /* VCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCMessage.h; sourceTree = "<group>"; };
+		0C3210B71846A08900D3B6BC /* VCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCMessage.m; sourceTree = "<group>"; };
+		0C3210B91846A13600D3B6BC /* VCChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCChannel.h; sourceTree = "<group>"; };
+		0C3210BA1846A13600D3B6BC /* VCChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCChannel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +331,7 @@
 		0C320FA81846814000D3B6BC /* VChat */ = {
 			isa = PBXGroup;
 			children = (
+				0C3210B218469FDE00D3B6BC /* Models */,
 				0C320FD718468BD200D3B6BC /* libs */,
 				0C320FB11846814000D3B6BC /* VCAppDelegate.h */,
 				0C320FB21846814000D3B6BC /* VCAppDelegate.m */,
@@ -628,6 +638,19 @@
 			path = Transport;
 			sourceTree = "<group>";
 		};
+		0C3210B218469FDE00D3B6BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C3210B31846A00000D3B6BC /* VCUser.h */,
+				0C3210B41846A00000D3B6BC /* VCUser.m */,
+				0C3210B61846A08900D3B6BC /* VCMessage.h */,
+				0C3210B71846A08900D3B6BC /* VCMessage.m */,
+				0C3210B91846A13600D3B6BC /* VCChannel.h */,
+				0C3210BA1846A13600D3B6BC /* VCChannel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -731,6 +754,7 @@
 				0C32109D18468BD200D3B6BC /* PNLeaveRequest.m in Sources */,
 				0C3210A618468BD200D3B6BC /* PNNetworkHelper.m in Sources */,
 				0C32108718468BD200D3B6BC /* PNTimeTokenResponseParser.m in Sources */,
+				0C3210B81846A08900D3B6BC /* VCMessage.m in Sources */,
 				0C3210A418468BD200D3B6BC /* PNTimeTokenRequest.m in Sources */,
 				0C32109918468BD200D3B6BC /* UIApplication+PNAdditions.m in Sources */,
 				0C320FAF1846814000D3B6BC /* main.m in Sources */,
@@ -753,6 +777,7 @@
 				0C32108D18468BD200D3B6BC /* PNJSONSerialization.m in Sources */,
 				0C32108018468BD200D3B6BC /* PNChannelHistoryParser.m in Sources */,
 				0C320FB91846814000D3B6BC /* VCViewController.m in Sources */,
+				0C3210B51846A00000D3B6BC /* VCUser.m in Sources */,
 				0C32108818468BD200D3B6BC /* PNChannelEvents.m in Sources */,
 				0C3210A818468BD200D3B6BC /* PNServiceChannel.m in Sources */,
 				0C3210AA18468BD200D3B6BC /* PNConnectionChannel.m in Sources */,
@@ -762,6 +787,7 @@
 				0C32109118468BD200D3B6BC /* PNRequestsQueue.m in Sources */,
 				0C32109218468BD200D3B6BC /* PNResponse.m in Sources */,
 				0C3210A218468BD200D3B6BC /* PNPushNotificationsStateChangeRequest.m in Sources */,
+				0C3210BB1846A13600D3B6BC /* VCChannel.m in Sources */,
 				0C32107E18468BD200D3B6BC /* PNActionResponseParser.m in Sources */,
 				0C32107818468BD200D3B6BC /* PubNub.m in Sources */,
 				0C32108A18468BD200D3B6BC /* PNDate.m in Sources */,

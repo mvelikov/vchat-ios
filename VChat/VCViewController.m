@@ -7,6 +7,7 @@
 //
 
 #import "VCViewController.h"
+#import "VCConfig.h"
 
 @interface VCViewController ()
 
@@ -19,7 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [PubNub setConfiguration:[PNConfiguration defaultConfiguration]];
+    [PubNub setConfiguration:[PNConfiguration configurationForOrigin:kOrigin publishKey:kPubKey subscribeKey:kSubKey secretKey:kSecret]];
     
     [PubNub connectWithSuccessBlock:^(NSString *origin) {
         PNLog(PNLogGeneralLevel, self, @"{BLOCK} PubNub client connected to: %@", origin);
@@ -27,7 +28,7 @@
         int64_t delayInSeconds = 1.0;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            [PubNub subscribeOnChannel:[PNChannel channelWithName:@"a" shouldObservePresence:YES]]; });
+            [PubNub subscribeOnChannel:[PNChannel channelWithName:@"channel1" shouldObservePresence:YES]]; });
         
     } errorBlock:^(PNError *connectionError) {
         
