@@ -256,6 +256,7 @@
 		0C3210AB18468E8A00D3B6BC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0C3210AD18468E9500D3B6BC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0C3210AF18468EA100D3B6BC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0C3210B1184691DD00D3B6BC /* VCConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +330,7 @@
 				0C320FB81846814000D3B6BC /* VCViewController.m */,
 				0C320FBA1846814000D3B6BC /* Images.xcassets */,
 				0C320FA91846814000D3B6BC /* Supporting Files */,
+				0C3210B1184691DD00D3B6BC /* VCConfig.h */,
 			);
 			path = VChat;
 			sourceTree = "<group>";

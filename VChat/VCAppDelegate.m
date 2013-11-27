@@ -10,8 +10,13 @@
 
 @implementation VCAppDelegate
 
+- (void)pubnubClient:(PubNub *)client didReceiveMessage:(PNMessage *)message {
+    PNLog(PNLogGeneralLevel, self, @"PubNub client received message: %@", message);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [PubNub setDelegate:self];
     // Override point for customization after application launch.
     return YES;
 }
