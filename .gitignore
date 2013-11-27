@@ -1,3 +1,6 @@
+VChat/VCConfig.h
+.DS_Store
+
 # Xcode
 build/*
 *.pbxuser
@@ -14,4 +17,4 @@ xcuserdata
 profile
 *.moved-aside
 
-VChat/VCConfig.h
+
