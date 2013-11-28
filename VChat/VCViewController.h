@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCViewController : UIViewController
+@interface VCViewController : UIViewController <NSURLConnectionDelegate, UITextFieldDelegate>
 
-@property (weak, nonatomic) UIButton* loginBtn;
-@property (weak, nonatomic) UITextField* usernameFld;
-@property (weak, nonatomic) UITextField* passwordFld;
+@property (weak, nonatomic) IBOutlet UITextField* usernameFld;
+@property (weak, nonatomic) IBOutlet UITextField* passwordFld;
+- (IBAction)loginBtn:(id)sender;
+
 @end
