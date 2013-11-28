@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VCMessage : NSObject
+@interface VCMessage : NSObject {
+    @private NSString* message;
+    @private NSString* channel;
+    @private VCUser* user;
+}
+
+@property (nonatomic, retain) NSString* message;
+@property (nonatomic, retain) NSString* channel;
+@property (nonatomic, retain) VCUser* user;
 
 @end

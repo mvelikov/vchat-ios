@@ -9,10 +9,9 @@
 #import "VCUser.h"
 #import "VCMessage.h"
 
-@implementation VCMessage {
-    @private NSString* message;
-    @private NSString* channel;
-    @private VCUser* user;
-}
+@implementation VCMessage 
 
+@synthesize user;
+@synthesize message;
+@synthesize channel;
 @end

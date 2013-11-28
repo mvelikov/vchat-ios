@@ -8,8 +8,7 @@
 
 #import "VCChannel.h"
 
-@implementation VCChannel {
-    @private NSString* name;
-}
+@implementation VCChannel 
 
+@synthesize name;
 @end
