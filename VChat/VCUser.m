@@ -11,6 +11,7 @@
 @implementation VCUser
 @synthesize username;
 @synthesize password;
+@synthesize loggedin;
 
 +(VCUser*) sharedUser {
     static VCUser* sharedMyUser = nil;
@@ -27,6 +28,7 @@
     if (self = [super init]) {
         username = [[NSString alloc] init];
         password = [[NSString alloc] init];
+        loggedin = false;
     }
     
     return self;

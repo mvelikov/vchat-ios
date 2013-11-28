@@ -11,10 +11,12 @@
 @interface VCUser : NSObject {
     @private NSString* username;
     @private NSString* password;
+    @private BOOL loggedin;
 }
 
 @property (nonatomic, retain) NSString* username;
 @property (nonatomic, retain) NSString* password;
+@property (nonatomic) BOOL loggedin;
 
 +(VCUser*) sharedUser;
 
