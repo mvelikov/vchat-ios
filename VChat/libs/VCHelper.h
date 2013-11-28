@@ -12,4 +12,5 @@
 
 +(NSURLRequest*) sendSimpleHTTPRequestFor: (NSString*)url withStringData: (NSString*)stringData;
 +(NSURLRequest*) sendSimpleRequestForUser: (NSString* )user withPassword: (NSString*)pass;
++(void) showAlertMessageWithTitle: (NSString*) title andText: (NSString*) text; 
 @end

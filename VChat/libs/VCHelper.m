@@ -33,4 +33,15 @@
     
     return [self sendSimpleHTTPRequestFor:@"user/index" withStringData:postString];
 }
+
++(void) showAlertMessageWithTitle:(NSString *)title andText:(NSString *)text {
+    UIAlertView *alertView = [[UIAlertView alloc ] initWithTitle:title
+                                                         message:text
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil, nil];
+    
+    [alertView show];
+}
+
 @end
