@@ -80,6 +80,8 @@
 		0C3210B81846A08900D3B6BC /* VCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210B71846A08900D3B6BC /* VCMessage.m */; };
 		0C3210BB1846A13600D3B6BC /* VCChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210BA1846A13600D3B6BC /* VCChannel.m */; };
 		0C3210C21847C0E400D3B6BC /* VCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210C11847C0E400D3B6BC /* VCHelper.m */; };
+		0C3210F21847E3C200D3B6BC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3210F11847E3C200D3B6BC /* QuartzCore.framework */; };
+		0C3210F61847E4CB00D3B6BC /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210F51847E4CB00D3B6BC /* DACircularProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +271,9 @@
 		0C3210BA1846A13600D3B6BC /* VCChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCChannel.m; sourceTree = "<group>"; };
 		0C3210C01847C0E400D3B6BC /* VCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCHelper.h; sourceTree = "<group>"; };
 		0C3210C11847C0E400D3B6BC /* VCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCHelper.m; sourceTree = "<group>"; };
+		0C3210F11847E3C200D3B6BC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0C3210F41847E4CB00D3B6BC /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
+		0C3210F51847E4CB00D3B6BC /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3210F21847E3C200D3B6BC /* QuartzCore.framework in Frameworks */,
 				0C3210B018468EA100D3B6BC /* SystemConfiguration.framework in Frameworks */,
 				0C3210AE18468E9500D3B6BC /* libz.dylib in Frameworks */,
 				0C3210AC18468E8A00D3B6BC /* CFNetwork.framework in Frameworks */,
@@ -301,6 +307,7 @@
 		0C320F961846814000D3B6BC = {
 			isa = PBXGroup;
 			children = (
+				0C3210F31847E4CB00D3B6BC /* DACircularProgress */,
 				0C320FA81846814000D3B6BC /* VChat */,
 				0C320FC71846814000D3B6BC /* VChatTests */,
 				0C320FA11846814000D3B6BC /* Frameworks */,
@@ -320,6 +327,7 @@
 		0C320FA11846814000D3B6BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C3210F11847E3C200D3B6BC /* QuartzCore.framework */,
 				0C3210AF18468EA100D3B6BC /* SystemConfiguration.framework */,
 				0C3210AD18468E9500D3B6BC /* libz.dylib */,
 				0C3210AB18468E8A00D3B6BC /* CFNetwork.framework */,
@@ -656,6 +664,16 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		0C3210F31847E4CB00D3B6BC /* DACircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				0C3210F41847E4CB00D3B6BC /* DACircularProgressView.h */,
+				0C3210F51847E4CB00D3B6BC /* DACircularProgressView.m */,
+			);
+			name = DACircularProgress;
+			path = ../DACircularProgress/DACircularProgress;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -779,6 +797,7 @@
 				0C3210A518468BD200D3B6BC /* PNMessagingChannel.m in Sources */,
 				0C32109818468BD200D3B6BC /* NSString+PNAddition.m in Sources */,
 				0C32108218468BD200D3B6BC /* PNHereNowResponseParser.m in Sources */,
+				0C3210F61847E4CB00D3B6BC /* DACircularProgressView.m in Sources */,
 				0C3210A018468BD200D3B6BC /* PNPushNotificationsEnabledChannelsRequest.m in Sources */,
 				0C32108D18468BD200D3B6BC /* PNJSONSerialization.m in Sources */,
 				0C32108018468BD200D3B6BC /* PNChannelHistoryParser.m in Sources */,

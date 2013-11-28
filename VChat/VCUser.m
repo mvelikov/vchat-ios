@@ -28,7 +28,7 @@
     if (self = [super init]) {
         username = [[NSString alloc] init];
         password = [[NSString alloc] init];
-        loggedin = false;
+        loggedin = NO;
     }
     
     return self;

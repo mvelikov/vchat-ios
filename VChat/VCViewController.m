@@ -10,7 +10,7 @@
 #import "VCConfig.h"
 
 @interface VCViewController ()
-
+@property (strong, nonatomic) NSTimer *timer;
 @end
 
 @implementation VCViewController
@@ -18,11 +18,21 @@
 @synthesize usernameFld;
 @synthesize passwordFld;
 
+@synthesize responseData;
+@synthesize preloadingImg;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.progressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake(140.0f, 380.0f, 40.0f, 40.0f)];
+    self.progressView.roundedCorners = YES;
+    self.progressView.trackTintColor = [UIColor lightGrayColor];
+    self.progressView.hidden = NO;
+    [self.view addSubview:self.progressView];
+    
+
     usernameFld.delegate = self;
     passwordFld.delegate = self;
     
@@ -65,32 +75,16 @@
 - (IBAction)loginBtn:(id)sender {
     
     [self.view endEditing:YES];
-//    NSURL *url = [NSURL URLWithString:[kBaseHref stringByAppendingString:@"user/index"]];
-//    
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-//    [request setHTTPMethod:@"POST"];
-//    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
-//
-//    NSString *userString = [@"user=" stringByAppendingString:usernameFld.text];
-//    NSString *passwordString = [@"&pass=" stringByAppendingString:passwordFld.text];
-//    NSString *postString = [userString stringByAppendingString:passwordString];
-//    
-//    NSData *data = [postString dataUsingEncoding:NSUTF8StringEncoding];
-//    [request setHTTPBody:data];
-//    [request setValue:[NSString stringWithFormat:@"%u", [data length]] forHTTPHeaderField:@"Content-Length"];
+
+    [self startAnimation];
     
     @try {
         [NSURLConnection connectionWithRequest:[VCHelper sendSimpleRequestForUser:usernameFld.text withPassword: passwordFld.text] delegate:self];
     } @catch (NSException* e) {
         NSLog(@"Exception");
-        UIAlertView *alertView = [[UIAlertView alloc ] initWithTitle:@"Invalid Credentials"
-                                                     message:@"Please provide a valid username and passowrd!"
-                                                    delegate:nil
-                                                   cancelButtonTitle:@"OK"
-                                                   otherButtonTitles:nil, nil];
-        
-        [alertView show];
+        [VCHelper showAlertMessageWithTitle:@"Invalid Credentials" andText:@"Please provide a valid username and password"];
     }
+    [self stopAnimation];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -105,33 +99,73 @@
     // so that we can append data to it in the didReceiveData method
     // Furthermore, this method is called each time there is a redirect so reinitializing it
     // also serves to clear it
-//   _responseData  = [[NSMutableData alloc] init];
-    NSLog(@"1");
+   responseData = [[NSMutableData alloc] init];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     // Append the new data to the instance variable you declared
-//    [_responseData appendData:data];
-    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);
-    NSLog(@"2");
+    [responseData appendData:data];
+    NSError* error;
+    NSDictionary* jsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    int success = [[jsonData objectForKey:@"success"] intValue];
+    if (success == 1) {
+        NSLog(@"Logged");
+        VCUser* userObj = [VCUser sharedUser];
+        [userObj setUsername:[jsonData objectForKey:@"user"]];
+        [userObj setPassword:[jsonData objectForKey:@"pass"]];
+        [userObj setLoggedin:YES];
+    } else {
+        [VCHelper showAlertMessageWithTitle:@"Invalid User" andText:@"There is no user with such username and password"];
+    }
 }
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection
                   willCacheResponse:(NSCachedURLResponse*)cachedResponse {
     // Return nil to indicate not necessary to store a cached response for this connection
-    NSLog(@"3");
     return nil;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // The request is complete and data has been received
     // You can parse the stuff in your instance variable now
-    NSLog(@"4");
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     // The request has failed for some reason!
     // Check the error var
-    NSLog(@"5");
 }
+
+- (void)progressChange
+{
+    NSArray *progressViews = @[self.progressView];
+    for (DACircularProgressView *progressView in progressViews) {
+        CGFloat progress = ![self.timer isValid] ? 0.5 / 10.0f : progressView.progress + 0.01f;
+        [progressView setProgress:progress animated:YES];
+        
+        if (progressView.progress >= 1.0f && [self.timer isValid]) {
+            [progressView setProgress:0.f animated:YES];
+        }
+        
+    }
+}
+
+- (void)startAnimation
+{
+    self.progressView.hidden = NO;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.03
+                                                  target:self
+                                                selector:@selector(progressChange)
+                                                userInfo:nil
+                                                 repeats:YES];
+//    self.continuousSwitch.on = YES;
+}
+
+- (void)stopAnimation
+{
+    [self.timer invalidate];
+    self.timer = nil;
+    self.progressView.hidden = YES;
+//    self.continuousSwitch.on = NO;
+}
+
 @end

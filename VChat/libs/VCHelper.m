@@ -24,6 +24,7 @@
 }
 
 +(NSURLRequest*) sendSimpleRequestForUser: (NSString* )user withPassword: (NSString*)pass {
+
     if ([user length] == 0 && [pass length] == 0) {
         [NSException raise:@"Invalid user and pass string provided" format:@"Fill in user and pass strings"];
     }
