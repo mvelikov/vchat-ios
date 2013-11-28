@@ -14,4 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "PNImports.h"
+    #import "VCUser.h"
+    #import "VCConfig.h"
+    #import "VCHelper.h"
 #endif
