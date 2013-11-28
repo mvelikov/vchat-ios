@@ -10,4 +10,7 @@
 
 @interface VCViewController : UIViewController
 
+@property (weak, nonatomic) UIButton* loginBtn;
+@property (weak, nonatomic) UITextField* usernameFld;
+@property (weak, nonatomic) UITextField* passwordFld;
 @end
