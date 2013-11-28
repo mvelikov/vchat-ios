@@ -61,6 +61,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tcb-WJ-Fgt"/>
+                                    <segue destination="Yce-Pf-F6w" kind="push" identifier="showChannelsList" id="b3f-re-t3g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,6 +74,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Table View Controller - Root View Controller-->
+        <scene sceneID="tbe-Yc-coJ">
+            <objects>
+                <tableViewController id="Q9S-6q-A58" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="H4J-JV-tZU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kBa-dq-tZh">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kBa-dq-tZh" id="9ci-P4-aIt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="rxq-Ow-uMh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ct-UP-3ZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269" y="13"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5vT-C8-QnN">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Yce-Pf-F6w" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I5e-YE-FFe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="25S-5U-28b">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q9S-6q-A58" kind="relationship" relationship="rootViewController" id="Fyg-b4-fHw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-WD-SWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="13"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -168,4 +168,13 @@
 //    self.continuousSwitch.on = NO;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showChannelsList"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        NSDate *object = _filteredData[indexPath.row];
+//        [[segue destinationViewController] setDetailItem:object];
+    }
+}
+
 @end
