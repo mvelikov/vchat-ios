@@ -8,6 +8,7 @@
 
 #import "VCAppDelegate.h"
 
+
 @implementation VCAppDelegate
 
 - (void)pubnubClient:(PubNub *)client didReceiveMessage:(PNMessage *)message {
@@ -16,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    [VCUser init];
     [PubNub setDelegate:self];
     // Override point for customization after application launch.
     return YES;

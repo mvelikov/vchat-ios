@@ -79,6 +79,7 @@
 		0C3210B51846A00000D3B6BC /* VCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210B41846A00000D3B6BC /* VCUser.m */; };
 		0C3210B81846A08900D3B6BC /* VCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210B71846A08900D3B6BC /* VCMessage.m */; };
 		0C3210BB1846A13600D3B6BC /* VCChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210BA1846A13600D3B6BC /* VCChannel.m */; };
+		0C3210C21847C0E400D3B6BC /* VCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210C11847C0E400D3B6BC /* VCHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +267,8 @@
 		0C3210B71846A08900D3B6BC /* VCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCMessage.m; sourceTree = "<group>"; };
 		0C3210B91846A13600D3B6BC /* VCChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCChannel.h; sourceTree = "<group>"; };
 		0C3210BA1846A13600D3B6BC /* VCChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCChannel.m; sourceTree = "<group>"; };
+		0C3210C01847C0E400D3B6BC /* VCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCHelper.h; sourceTree = "<group>"; };
+		0C3210C11847C0E400D3B6BC /* VCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +381,8 @@
 			isa = PBXGroup;
 			children = (
 				0C320FD818468BD200D3B6BC /* PubNub */,
+				0C3210C01847C0E400D3B6BC /* VCHelper.h */,
+				0C3210C11847C0E400D3B6BC /* VCHelper.m */,
 			);
 			path = libs;
 			sourceTree = "<group>";
@@ -750,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C32109018468BD200D3B6BC /* PNOperationStatus.m in Sources */,
+				0C3210C21847C0E400D3B6BC /* VCHelper.m in Sources */,
 				0C3210A918468BD200D3B6BC /* PNConnection.m in Sources */,
 				0C32109D18468BD200D3B6BC /* PNLeaveRequest.m in Sources */,
 				0C3210A618468BD200D3B6BC /* PNNetworkHelper.m in Sources */,
