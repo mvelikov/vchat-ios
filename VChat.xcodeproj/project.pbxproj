@@ -82,6 +82,8 @@
 		0C3210C21847C0E400D3B6BC /* VCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210C11847C0E400D3B6BC /* VCHelper.m */; };
 		0C3210F21847E3C200D3B6BC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3210F11847E3C200D3B6BC /* QuartzCore.framework */; };
 		0C3210F61847E4CB00D3B6BC /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3210F51847E4CB00D3B6BC /* DACircularProgressView.m */; };
+		0C6D4FDB184900E100F6C0B5 /* VCChannelsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D4FDA184900E100F6C0B5 /* VCChannelsMasterViewController.m */; };
+		0C6D4FDE1849010300F6C0B5 /* VCChatDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D4FDD1849010300F6C0B5 /* VCChatDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,6 +276,10 @@
 		0C3210F11847E3C200D3B6BC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0C3210F41847E4CB00D3B6BC /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
 		0C3210F51847E4CB00D3B6BC /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		0C6D4FD9184900E100F6C0B5 /* VCChannelsMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCChannelsMasterViewController.h; sourceTree = "<group>"; };
+		0C6D4FDA184900E100F6C0B5 /* VCChannelsMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCChannelsMasterViewController.m; sourceTree = "<group>"; };
+		0C6D4FDC1849010300F6C0B5 /* VCChatDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCChatDetailsViewController.h; sourceTree = "<group>"; };
+		0C6D4FDD1849010300F6C0B5 /* VCChatDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCChatDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,13 +348,12 @@
 		0C320FA81846814000D3B6BC /* VChat */ = {
 			isa = PBXGroup;
 			children = (
+				0C6D4FD81849009900F6C0B5 /* Controllers */,
 				0C3210B218469FDE00D3B6BC /* Models */,
 				0C320FD718468BD200D3B6BC /* libs */,
 				0C320FB11846814000D3B6BC /* VCAppDelegate.h */,
 				0C320FB21846814000D3B6BC /* VCAppDelegate.m */,
 				0C320FB41846814000D3B6BC /* Main.storyboard */,
-				0C320FB71846814000D3B6BC /* VCViewController.h */,
-				0C320FB81846814000D3B6BC /* VCViewController.m */,
 				0C320FBA1846814000D3B6BC /* Images.xcassets */,
 				0C320FA91846814000D3B6BC /* Supporting Files */,
 				0C3210B1184691DD00D3B6BC /* VCConfig.h */,
@@ -674,6 +679,19 @@
 			path = ../DACircularProgress/DACircularProgress;
 			sourceTree = "<group>";
 		};
+		0C6D4FD81849009900F6C0B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C320FB71846814000D3B6BC /* VCViewController.h */,
+				0C320FB81846814000D3B6BC /* VCViewController.m */,
+				0C6D4FD9184900E100F6C0B5 /* VCChannelsMasterViewController.h */,
+				0C6D4FDA184900E100F6C0B5 /* VCChannelsMasterViewController.m */,
+				0C6D4FDC1849010300F6C0B5 /* VCChatDetailsViewController.h */,
+				0C6D4FDD1849010300F6C0B5 /* VCChatDetailsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -804,6 +822,7 @@
 				0C320FB91846814000D3B6BC /* VCViewController.m in Sources */,
 				0C3210B51846A00000D3B6BC /* VCUser.m in Sources */,
 				0C32108818468BD200D3B6BC /* PNChannelEvents.m in Sources */,
+				0C6D4FDE1849010300F6C0B5 /* VCChatDetailsViewController.m in Sources */,
 				0C3210A818468BD200D3B6BC /* PNServiceChannel.m in Sources */,
 				0C3210AA18468BD200D3B6BC /* PNConnectionChannel.m in Sources */,
 				0C3210A318468BD200D3B6BC /* PNSubscribeRequest.m in Sources */,
@@ -817,6 +836,7 @@
 				0C32107818468BD200D3B6BC /* PubNub.m in Sources */,
 				0C32108A18468BD200D3B6BC /* PNDate.m in Sources */,
 				0C32109B18468BD200D3B6BC /* PNHereNowRequest.m in Sources */,
+				0C6D4FDB184900E100F6C0B5 /* VCChannelsMasterViewController.m in Sources */,
 				0C32108118468BD200D3B6BC /* PNErrorResponseParser.m in Sources */,
 				0C3210A718468BD200D3B6BC /* PNReachability.m in Sources */,
 				0C32107C18468BD200D3B6BC /* PNPresenceEvent.m in Sources */,
@@ -1040,6 +1060,7 @@
 				0C320FD31846814000D3B6BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C320FD41846814000D3B6BC /* Build configuration list for PBXNativeTarget "VChatTests" */ = {
 			isa = XCConfigurationList;
@@ -1048,6 +1069,7 @@
 				0C320FD61846814000D3B6BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

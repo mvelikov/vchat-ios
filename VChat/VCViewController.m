@@ -80,11 +80,18 @@
     
     @try {
         [NSURLConnection connectionWithRequest:[VCHelper sendSimpleRequestForUser:usernameFld.text withPassword: passwordFld.text] delegate:self];
+        
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        UITableViewController* channelsViewController = [storyboard instantiateViewControllerWithIdentifier:@"channelsView"];
+        
+        [self.navigationController pushViewController:channelsViewController animated:YES];
+
     } @catch (NSException* e) {
         NSLog(@"Exception");
         [VCHelper showAlertMessageWithTitle:@"Invalid Credentials" andText:@"Please provide a valid username and password"];
     }
-    [self stopAnimation];
+
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -117,6 +124,7 @@
     } else {
         [VCHelper showAlertMessageWithTitle:@"Invalid User" andText:@"There is no user with such username and password"];
     }
+    [self stopAnimation];
 }
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection
@@ -133,6 +141,7 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     // The request has failed for some reason!
     // Check the error var
+    [self stopAnimation];
 }
 
 - (void)progressChange
@@ -168,13 +177,13 @@
 //    self.continuousSwitch.on = NO;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showChannelsList"]) {
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([[segue identifier] isEqualToString:@"showChannelsList"]) {
 //        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 //        NSDate *object = _filteredData[indexPath.row];
 //        [[segue destinationViewController] setDetailItem:object];
-    }
-}
+//    }
+//}
 
 @end

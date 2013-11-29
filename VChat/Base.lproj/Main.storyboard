@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M7V-4n-GBt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -29,17 +29,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giq-cK-7Pv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giq-cK-7Pv">
                                 <rect key="frame" x="158" y="245" width="142" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uiK-qB-WlC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uiK-qB-WlC">
                                 <rect key="frame" x="158" y="283" width="142" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQG-bF-exp">
                                 <rect key="frame" x="20" y="249" width="136" height="21"/>
@@ -61,12 +61,13 @@
                                 </state>
                                 <connections>
                                     <action selector="loginBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tcb-WJ-Fgt"/>
-                                    <segue destination="Yce-Pf-F6w" kind="push" identifier="showChannelsList" id="b3f-re-t3g"/>
+                                    <segue destination="Q9S-6q-A58" kind="push" id="nfD-zW-sTF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zJ6-Lp-7c7"/>
                     <connections>
                         <outlet property="passwordFld" destination="uiK-qB-WlC" id="mgp-Zt-Vmj"/>
                         <outlet property="usernameFld" destination="giq-cK-7Pv" id="yBB-QR-Exo"/>
@@ -74,11 +75,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="809" y="5"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Channels Master View Controller - Root View Controller-->
         <scene sceneID="tbe-Yc-coJ">
             <objects>
-                <tableViewController id="Q9S-6q-A58" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="channelsView" id="Q9S-6q-A58" customClass="VCChannelsMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="H4J-JV-tZU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,23 +100,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ct-UP-3ZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1269" y="13"/>
+            <point key="canvasLocation" x="1237" y="5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="5vT-C8-QnN">
+        <scene sceneID="owd-HL-YYq">
             <objects>
-                <navigationController definesPresentationContext="YES" id="Yce-Pf-F6w" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="I5e-YE-FFe"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="25S-5U-28b">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZV-5C-0Or" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M7V-4n-GBt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5gN-ZW-VHm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Q9S-6q-A58" kind="relationship" relationship="rootViewController" id="Fyg-b4-fHw"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="KwJ-Sn-qnP"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-WD-SWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="13"/>
+            <point key="canvasLocation" x="249" y="13"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
