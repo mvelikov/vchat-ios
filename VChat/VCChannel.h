@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface VCChannel : NSObject {
+    @private NSString* uid;
     @private NSString* name;
 }
 
+@property (nonatomic, retain) NSString* uid;
 @property (nonatomic, retain) NSString* name;
 
 @end

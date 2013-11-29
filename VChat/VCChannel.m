@@ -10,5 +10,6 @@
 
 @implementation VCChannel 
 
+@synthesize uid;
 @synthesize name;
 @end
