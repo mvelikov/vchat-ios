@@ -7,31 +7,58 @@
 //
 
 #import "VCChannelsMasterViewController.h"
+#import "VCViewController.h"
 
 @interface VCChannelsMasterViewController ()
-
+    @property (retain, nonatomic) VCUser* userObj;
 @end
 
+
 @implementation VCChannelsMasterViewController
+
+@synthesize userObj;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+//        userObj = [VCUser sharedUser];
     }
     return self;
+}
+
+-(void) loadSiginInFormModalView {
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UITableViewController* channelsViewController = [storyboard instantiateViewControllerWithIdentifier:@"loginFormView"];
+    
+    [self presentViewController:channelsViewController animated:YES completion:nil];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+    if (![[VCUser sharedUser] loggedin]) {
+        [self loadSiginInFormModalView];
+    }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    BOOL logged = [[VCUser sharedUser] loggedin];
+    if (!logged) {
+        [self loadSiginInFormModalView];
+    } else {
+        
+    }
+//    [userObj loggedin];
 }
 
 - (void)didReceiveMemoryWarning
@@ -105,7 +132,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -113,8 +140,12 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"present_secondviewcontroller"]) {
+//         VCViewController *svc = (VCViewController *)segue.destinationViewController;
+//         svc.delegate = self;
+     }
 }
 
- */
+ 
 
 @end
