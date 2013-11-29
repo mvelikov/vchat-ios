@@ -23,6 +23,15 @@
     return request;
 }
 
++(NSURLRequest*) sendSimpleHTTPREquestForChannelsWithPassword: (NSString*) pass {
+    if ([pass length] == 0) {
+        [NSException raise:@"Invalid user and pass string provided" format:@"Fill in user and pass strings"];
+    }
+    NSString *passwordString = [@"pass=" stringByAppendingString:pass];
+    
+    return [self sendSimpleHTTPRequestFor:@"channel/index" withStringData:passwordString];
+}
+
 +(NSURLRequest*) sendSimpleRequestForUser: (NSString* )user withPassword: (NSString*)pass {
 
     if ([user length] == 0 && [pass length] == 0) {
