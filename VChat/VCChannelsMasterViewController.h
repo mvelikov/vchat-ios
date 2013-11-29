@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCChannelsMasterViewController : UITableViewController
+@interface VCChannelsMasterViewController : UITableViewController <UITableViewDataSource, NSURLConnectionDelegate>
 
+@property (strong, nonatomic) NSMutableArray* channelsList;
 @end

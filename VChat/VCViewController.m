@@ -62,7 +62,6 @@
 //        [self dismissViewControllerAnimated:@"loginFormView" completion:nil];]
 
     } @catch (NSException* e) {
-        NSLog(@"Exception");
         [VCHelper showAlertMessageWithTitle:@"Invalid Credentials" andText:@"Please provide a valid username and password"];
     }
 

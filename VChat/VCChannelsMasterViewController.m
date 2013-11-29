@@ -8,22 +8,22 @@
 
 #import "VCChannelsMasterViewController.h"
 #import "VCViewController.h"
-
+#import "VCChannel.h"
 @interface VCChannelsMasterViewController ()
-    @property (retain, nonatomic) VCUser* userObj;
+
 @end
 
 
 @implementation VCChannelsMasterViewController
 
-@synthesize userObj;
+@synthesize channelsList;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-//        userObj = [VCUser sharedUser];
+        
     }
     return self;
 }
@@ -36,12 +36,26 @@
     [self presentViewController:channelsViewController animated:YES completion:nil];
 }
 
+-(void) loadChannels {
+    @try {
+        [NSURLConnection connectionWithRequest:[VCHelper sendSimpleHTTPREquestForChannelsWithPassword:[[VCUser sharedUser] password]] delegate:self];
+        ;
+    }
+    @catch (NSException *exception) {
+        [VCHelper showAlertMessageWithTitle:@"Error" andText:@"There is something wrong with the system, please try again later!"];
+    }
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    channelsList = [[NSMutableArray alloc] init];
 
     if (![[VCUser sharedUser] loggedin]) {
         [self loadSiginInFormModalView];
+    } else {
+        [self loadChannels];
     }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,7 +70,7 @@
     if (!logged) {
         [self loadSiginInFormModalView];
     } else {
-        
+        [self loadChannels];
     }
 //    [userObj loggedin];
 }
@@ -71,16 +85,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [channelsList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,6 +101,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    VCChannel* channel = [channelsList objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [channel name];
     
     return cell;
 }
@@ -146,6 +161,52 @@
      }
 }
 
- 
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // A response has been received, this is where we initialize the instance var you created
+    // so that we can append data to it in the didReceiveData method
+    // Furthermore, this method is called each time there is a redirect so reinitializing it
+    // also serves to clear it
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    // Append the new data to the instance variable you declared
+//    [responseData appendData:data];
+    NSError* error;
+    NSDictionary* jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//    int success = [[jsonData objectForKey:@"success"] intValue];
+//    NSArray* allKeys = [jsonData allKeys];
+    
+    if (1 > 0) {
+        for (NSDictionary* dummyChannel in jsonData) {
+            VCChannel* channel = [[VCChannel alloc] init];
+            [channel setUid:[dummyChannel objectForKey:@"_id"]];
+            [channel setName:[dummyChannel objectForKey:@"name"]];
+            
+            [channelsList addObject:channel];
+        }
+        
+        [self.tableView reloadData];
+    } else {
+        [VCHelper showAlertMessageWithTitle:@"No Channels" andText:@"No channels are present, please try again later!"];
+    }
+//    [self stopAnimation];
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
+    // Return nil to indicate not necessary to store a cached response for this connection
+    return nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    // The request is complete and data has been received
+    // You can parse the stuff in your instance variable now
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    // The request has failed for some reason!
+    // Check the error var
+}
 
 @end
