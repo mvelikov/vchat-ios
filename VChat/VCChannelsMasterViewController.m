@@ -9,6 +9,7 @@
 #import "VCChannelsMasterViewController.h"
 #import "VCViewController.h"
 #import "VCChannel.h"
+#import "VCChatDetailsViewController.h"
 @interface VCChannelsMasterViewController ()
 
 @end
@@ -155,9 +156,11 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"present_secondviewcontroller"]) {
-//         VCViewController *svc = (VCViewController *)segue.destinationViewController;
-//         svc.delegate = self;
+    if ([segue.identifier isEqualToString:@"showMessagesView"]) {
+        NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+        VCChannel* channelObj = channelsList[indexPath.row];
+        
+        [[segue destinationViewController] setChannelObj:channelObj];
      }
 }
 
