@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCChatDetailsViewController : UIViewController
+@interface VCChatDetailsViewController : UIViewController <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *messageFld;
+- (IBAction)sendMsg:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *sendBtn;
 
 @end
