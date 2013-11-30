@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 mihata. All rights reserved.
 //
 
+#define kOFFSET_FOR_KEYBOARD 200.0
+
 #import <Foundation/Foundation.h>
 
 @interface VCHelper : NSObject
