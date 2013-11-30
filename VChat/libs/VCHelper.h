@@ -15,6 +15,8 @@
 +(NSURLRequest*) sendSimpleHTTPRequestFor: (NSString*)url withStringData: (NSString*)stringData;
 +(NSURLRequest*) sendSimpleRequestForUser: (NSString* )user withPassword: (NSString*)pass;
 +(NSURLRequest*) sendSimpleHTTPREquestForChannelsWithPassword: (NSString*) pass;
++(NSURLRequest*) sendSimpleHTTPRequestForChannel: (NSString*)channel WithPassword: (NSString* )pass andMessage:(NSString*) message;
+
 +(void) showAlertMessageWithTitle: (NSString*) title andText: (NSString*) text;
 
 @end

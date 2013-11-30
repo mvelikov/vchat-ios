@@ -23,6 +23,20 @@
     return request;
 }
 
++(NSURLRequest*) sendSimpleHTTPRequestForChannel: (NSString*)channel WithPassword: (NSString* )pass andMessage:(NSString*) message {
+    if ([pass length] == 0 || [message length] == 0) {
+        [NSException raise:@"Invalid channel or message provided" format:@"Please fill in message to send!"];
+    }
+    
+    NSString* channelString = [@"channel=" stringByAppendingString:channel];
+    NSString* passwordString = [@"&pass=" stringByAppendingString:pass];
+    NSString* messageString = [@"&message=" stringByAppendingString:message];
+    
+    NSString* data = [[channelString stringByAppendingString:passwordString] stringByAppendingString:messageString];
+    
+    return [self sendSimpleHTTPRequestFor:@"message/insert" withStringData:data];
+}
+
 +(NSURLRequest*) sendSimpleHTTPREquestForChannelsWithPassword: (NSString*) pass {
     if ([pass length] == 0) {
         [NSException raise:@"Invalid user and pass string provided" format:@"Fill in user and pass strings"];
