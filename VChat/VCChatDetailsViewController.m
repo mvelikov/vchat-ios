@@ -183,6 +183,9 @@
     if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
         // back button was pressed.  We know this is true because self is no longer
         // in the navigation stack.
+        PNChannel* currentChannel = [PNChannel channelWithName:channelObj.uid
+                                         shouldObservePresence:NO];
+        [PubNub unsubscribeFromChannel:currentChannel];
     }
     [super viewWillDisappear:animated];
 }
